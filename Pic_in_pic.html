@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Calculator</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+
+</head>
+
+  
+  
+  <body>
+    <h1> Get started by sharing your screen!</h1>
+
+    <video id="videoElement" controls style="box-shadow: inset; width: 300px; height:300px;" >
+        <source src="sample.mp4" type="video/mp4">
+    </video>
+
+    
+    
+    <div style="color: black; float: right;">
+        <button id="pipButtonElement" style= "display: none; size: 70px;" type="button"class="button">Enter picture-in-picture mode</button>
+    </div>
+
+    <script>
+        const videoElement= document.querySelector("#videoElement");
+        const pipButtonElement= document.querySelector("#pipButtonElement");
+
+
+        if("pictureInPictureEnabled" in document){
+            pipButtonElement.style.display = null;
+
+            pipButtonElement.addEventListener("click",()=>{
+                videoElement.requestPictureInPicture().catch(err=>{
+                    console.log(err);
+                })
+            })
+        }
+
+    </script>
+</body>
+</html>
