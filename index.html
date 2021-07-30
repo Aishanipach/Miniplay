@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Pic-in-Pic</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap">
+
+    <link href="style.css" rel="stylesheet">
+    
+</head>
+
+
+  <body>
+    <text><b>Share Screen Toggle👩‍💻👩‍💻</b></text>
+    <!--
+    <div class="github">
+
+        <span></span>
+      
+        <span></span>
+       
+        <span></span>
+    </div> -->
+
+    <div class="grid-container">
+        <div class="grid-item">
+        <h2> Share Screen</h2>
+        <p><button id="start">Start Capture</button>&nbsp;<button id="stop">Stop Capture</button></p>
+        <p style="font-size: 16px;">Click the Start Capture button to begin.<br>
+        </p>
+            <pre id="log"></pre> 
+        </div>    
+        
+        <div class="grid-item" style="width: 420px;"> 
+            <h2><strong>Stream Capture: </strong></h2>
+            
+
+        <!--<video id="videoElement" controls style="box-shadow: inset; width: 300px; height:300px;" >
+            <source src="sample.mp4" type="video/mp4">
+        </video>-->
+        <video id="video" autoplay style="width: 400px; height: 300px"> </video>
+        
+            <div style="color: black; float: right;">
+                <button id="pipButtonElement" style= "display: none; size: 70px;" type="button"class="button">
+                    Enter picture-in-picture mode
+                </button>
+            </div>
+            
+
+        </div>
+    <script>
+        const videoElem = document.getElementById("video");
+        const logElem = document.getElementById("log");
+        const startElem = document.getElementById("start");
+        const stopElem = document.getElementById("stop");
+
+        // Options for getDisplayMedia()
+
+        var displayMediaOptions = {
+        video: {
+            cursor: "always"
+            },
+            audio: false
+        };
+
+        // Set event listeners for the start and stop buttons
+        startElem.addEventListener("click", function(evt) {
+        startCapture();
+        }, false);
+
+        stopElem.addEventListener("click", function(evt) {
+        stopCapture();
+        }, false);
+
+        console.log = msg => logElem.innerHTML += `${msg}<br>`;
+        console.error = msg => logElem.innerHTML += `<span class="error">${msg}</span><br>`;
+        console.warn = msg => logElem.innerHTML += `<span class="warn">${msg}<span><br>`;
+        console.info = msg => logElem.innerHTML += `<span class="info">${msg}</span><br>`;
+        
+        async function startCapture() {
+            logElem.innerHTML = "";
+
+            try {
+                videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+                dumpOptionsInfo();
+            } catch(err) {
+                console.error("Error: " + err);
+            }
+        }
+
+        function stopCapture(evt) {
+            let tracks = videoElem.srcObject.getTracks();
+
+            tracks.forEach(track => track.stop());
+            videoElem.srcObject = null;
+        }
+
+        function dumpOptionsInfo() {
+            const videoTrack = videoElem.srcObject.getVideoTracks()[0];
+
+            console.info("Track settings:");
+            console.info(JSON.stringify(videoTrack.getSettings(), null, 2));
+            console.info("Track constraints:");
+            console.info(JSON.stringify(videoTrack.getConstraints(), null, 2));
+        }
+    </script>
+
+
+
+<script>
+
+    const videoElement= document.querySelector("#video");
+    const pipButtonElement= document.querySelector("#pipButtonElement");
+
+
+    if("pictureInPictureEnabled" in document){
+        pipButtonElement.style.display = null;
+
+        pipButtonElement.addEventListener("click",()=>{
+            videoElement.requestPictureInPicture().catch(err=>{
+                console.log(err);
+            })
+        })
+    }
+
+</script>
+</div>
+
+</body>
+</html>
