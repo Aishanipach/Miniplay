@@ -1,5 +1,6 @@
 # Miniplay💻
-<h3> To help you preview of a window while you work on another.</h3>
+<h3> Pops up a mini player that captures a window while you work on another.</h3>
+***(Couldn't get a module for making a DIY second screen, hence this )***
 
 You can:
 - Stream Video🎬
