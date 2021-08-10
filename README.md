@@ -1,7 +1,8 @@
 # Miniplay💻
 <h3> Pops up a mini player that captures a window while you work on another.</h3>
-***(Couldn't get a module for making a DIY second screen, hence this )***
+<i>( Couldn't get a module online while making a DIY second screen for getting the 'Dev setup', hence this )</i>
 
+<br> <br>
 You can:
 - Stream Video🎬
 - Open Tutorials👩‍💻
