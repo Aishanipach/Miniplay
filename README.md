@@ -8,8 +8,6 @@ You can:
 
 in the miniplayer while working on another window. <br> <br>
 
-- Share Screen-> Enter View Mode-> Enjoy! 
-
 ## Capture API✔ <br>
   <b> Call `getDisplayMedia()` on the instance of Media `navigator.mediaDevices`: </b> <br>
   ```
@@ -22,4 +20,8 @@ in the miniplayer while working on another window. <br> <br>
   ```
  videoElement.requestPictureInPicture();
   ```
+  
+ #### 🚀 Share Screen-> Enter View Mode-> Enjoy!
+
+
   
