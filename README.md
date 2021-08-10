@@ -6,7 +6,8 @@ You can:
 - Open Tutorials👩‍💻
 - View code📃 and much more...
 
-in the miniplayer while working on another window. <br> <br>
+in the miniplayer while working on another window.
+#### 🚀 Share Screen-> Enter View Mode-> Enjoy!<br><br>
 
 ## Capture API✔ <br>
   <b> Call `getDisplayMedia()` on the instance of Media `navigator.mediaDevices`: </b> <br>
@@ -20,8 +21,7 @@ in the miniplayer while working on another window. <br> <br>
   ```
  videoElement.requestPictureInPicture();
   ```
-  
- #### 🚀 Share Screen-> Enter View Mode-> Enjoy!
+
 
 
   
