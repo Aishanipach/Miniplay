@@ -14,14 +14,13 @@ in the miniplayer while working on another window.
   ```
   captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
   ```
-  
+  [How to use this API⚡](https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API)
   
  ## Picture-in-Picture API✔ <br>
   <b> The `HTMLVideoElement` method `requestPictureInPicture()` request to display the video in picture-in-picture mode: </b> <br>
   ```
  videoElement.requestPictureInPicture();
   ```
-
-
-
+  [How to use this API⚡](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/requestPictureInPicture)
   
+  ## Fork this repo!👇
