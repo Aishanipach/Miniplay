@@ -58,4 +58,24 @@ p{
     margin-block-end: 0.5em;
     margin-block-start: 0.1em;
 }
- 
+
+button{
+    
+    max-width: 100%;
+    background-color: #1976d2;
+    color: rgb(255, 255, 255);
+    padding: 8px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+    transition: 0.2s ease-in-out;
+    font-size: 15px;
+    
+}
+button:hover {
+    filter: brightness(88%);
+  }
+
+
