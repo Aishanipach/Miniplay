@@ -1,6 +1,6 @@
 # Miniplay💻
 <h3> Pops up a mini player that captures a window while you work on another.</h3>
-<i>( Couldn't get a module online while making a DIY second screen for getting the 'Dev setup', hence this )</i>
+<i>( Couldn't get a module onr the web while making a DIY second screen for getting the 'Dev setup', hence this )</i>
 
 Try it-> https://aishanipach.github.io/Miniplay/
 <br> <br>
