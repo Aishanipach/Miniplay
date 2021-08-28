@@ -27,3 +27,4 @@ in the miniplayer while working on another window.
   [How to use this API⚡](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/requestPictureInPicture)
   
   ## Fork this repo!👇
+  Add on more features that you feel our missing and make it more efficient!
