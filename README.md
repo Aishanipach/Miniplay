@@ -6,7 +6,7 @@
 
 ![Image of miniplayrer at work](https://github.com/Aishanipach/Miniplay/blob/main/Linkledin.png)
 
-Try it-> https://aishanipach.github.io/Miniplay/
+<b> Try it-> https://aishanipach.github.io/Miniplay/ </b>
 <br> <br>
 You can:
 - Stream Video🎬
