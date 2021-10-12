@@ -78,4 +78,18 @@ button:hover {
     filter: brightness(88%);
   }
 
+@media only screen and (max-width:800px){
+    .logs{
+        display:none;
+    }
 
+    video{
+        display:none;
+    }
+
+    .grid-container{
+        width: 550px;
+        height: 400px;
+    }
+
+}
