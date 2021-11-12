@@ -88,8 +88,9 @@ button:hover {
     }
 
     .grid-container{
-        width: 550px;
-        height: 400px;
+        width: 450px;
+        height: 500px;
+        margin: auto;
     }
 
 }
